@@ -1,0 +1,14 @@
+{
+  "name": "myutil-app",
+  "version": "1.0.0",
+  "description": "myutil command to manage file System",
+  "main": "input.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "myutil":"./activity/input.js"
+  }
+}

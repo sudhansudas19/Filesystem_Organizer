@@ -1,0 +1,50 @@
+This is Command Line Application to organize the File System.
+Programming language - Javascript
+Framework - Nodejs
+
+input.js is main entry of the Project.
+help,organize and view --flat and view --tree are command to view and organize File System.
+Currently organize.js is copying data in Organized_Folder ,if you want to move just change in sendFile() Method.
+Change fs.copyFileSync(src,pathofDestFile); 
+
+to 
+fs.move(src, dest, (err) => {
+  if (err) return console.log(err);
+  console.log(`File successfully moved!!`);
+});
+
+------------------------------------
+Ways to Make script global ?
+npm init enter
+
+inside package.json
+    add 
+     "bin": {
+    "myutil":"./activity/input.js"
+  }
+
+npm pack 
+npm install -g util-app-1.0.0.tgz
+------------------------------------
+#!/usr/bin/env node --> should be added in top of input.js as input.js is entry point of project.
+myutil will be global program
+Ready to run myutil help directly
+
+--------------------------------------
+sudhansudas19@Sudhansus-MBP ~ % myutil help
+ List of commands are:
+    1. view <dirname> --flat
+    2. view <dirname> --tree
+    3. organize <dirname> 
+    4. help
+------------------------------------------
+sudhansudas19@Sudhansus-MBP ~ % myutil view /Users/sudhansudas19/Desktop/Sudhansu/1_FileSystem_26_11_2022 --tree
+ 1_FileSystem_26_11_2022
+	 activity
+		 raw
+	 raw
+		 facts
+			 Intro.js
+			 primitive.js
+		 poc
+---------------------------------------------
